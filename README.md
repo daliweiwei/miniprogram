@@ -2,7 +2,7 @@
 
 > A Mpvue  miniprogram Framework  
 
-2019/04/08
+liweiliang  2019/04/08
 
 ## Build Setup
 
