@@ -1,6 +1,6 @@
 # miniprogram
 
-> A Mpvue  miniprogram Framework  
+> A Mpvue project framework
 
 liweiliang  2019/04/08
 
