@@ -1,7 +1,7 @@
 /**
  * Created by liweiliang 406320591@QQ.com on 2019/5/13 0013 17:04.
  */
-import api from "@/utils/flyio"
+import api from "@/flyio/api"
 
 const state = {
   count: 0

@@ -4,12 +4,22 @@
  */
 import Vue from 'vue'
 import Vuex from 'vuex'
+import createPersistedState from 'vuex-persistedstate'
+
 import counter from './counter'
 
 Vue.use(Vuex);
-console.log(counter);
 export default new Vuex.Store({
   modules:{
     counter,
-  }
+  },
+  plugins: [
+    createPersistedState({
+      storage: {
+        getItem: key => wx.getStorageSync(key),
+        setItem: (key, value) => wx.setStorageSync(key, value),
+        removeItem: key => {}
+      }
+    })
+  ]
 })

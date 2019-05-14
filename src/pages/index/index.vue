@@ -20,15 +20,15 @@
     </form>
 
     <a href="/pages/counter/main" class="counter">去往Vuex示例页面</a>
-    <a @click="goCounter" class="counter">去往Vuex示例页面 Click</a>
+    <a @click="goCounter" class="counter">去往Vuex示例页面 router</a>
     <a href="../packageA/index/main"> 分包A </a>
     <a href="../packageB/index/main"> 分包B </a>
 
     <p>
-      <van-button type="primary" @click="goPackageA">分包A按钮跳转</van-button>
+      <van-button type="primary" @click="goPackageA">分包A 路由跳转</van-button>
     </p>
     <p>
-      <van-button type="warning" @click="goPackageB">分包B按钮跳转</van-button>
+      <van-button type="warning" @click="goPackageB">分包B 路由跳转</van-button>
     </p>
 
 
@@ -153,7 +153,7 @@ export default {
 }
 
 .usermotto {
-  margin-top: 150px;
+  margin-top: 50px;
 }
 
 .form-control {
