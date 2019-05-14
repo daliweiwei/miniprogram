@@ -2,28 +2,31 @@
   <div class="counter-warp">
     <p>Vuex counter：{{ count }}</p>
     <p>
-      <button @click="increment">+</button>
-      <button @click="decrement">-</button>
+      <button @click="incrementClick">+</button>
+      <button @click="decrementClick">-</button>
     </p>
   </div>
 </template>
 
 <script>
 // Use Vuex
-import store from './store'
-
+// import store from './store'
+import {mapState,mapMutations} from 'vuex';
 export default {
   computed: {
-    count () {
-      return store.state.count
-    }
+    ...mapState({
+      count:state => state.counter.count
+    })
   },
   methods: {
-    increment () {
-      store.commit('increment')
+    ...mapMutations(["increment","decrement"]),
+    incrementClick () {
+      // this.$store.commit('increment');
+      this.increment()
     },
-    decrement () {
-      store.commit('decrement')
+    decrementClick () {
+      // this.$store.commit('decrement')
+      this.decrement();
     }
   }
 }
